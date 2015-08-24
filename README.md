@@ -2,7 +2,7 @@
 
 Pretty colors for categories, tags, and other taxonomy terms
 
-WP Term Colors allows users to assign colors to any visible category, tag, or taxonomy term using a fancy color picker, providing a customized look for their taxonomies.
+WP Term Colors allows users to assign colors to any visible category, tag, or taxonomy term using a fancy color picker, providing a customized look for their taxonomy terms.
 
 # Installation
 
