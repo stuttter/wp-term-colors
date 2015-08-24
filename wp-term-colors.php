@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name: WP Meta Color
+ * Plugin Name: WP Term Colors
  * Plugin URI:  https://wordpress.org/plugins/wp-term-colors/
  * Description: Pretty colors for categories, tags, and other taxonomy terms
  * Author:      John James Jacoby
