@@ -13,15 +13,15 @@
 // Exit if accessed directly
 defined( 'ABSPATH' ) || exit;
 
-if ( ! class_exists( 'WP_Term_Color' ) ) :
+if ( ! class_exists( 'WP_Term_Colors' ) ) :
 /**
- * Main WP Term Color class
+ * Main WP Term Colors class
  *
  * @link https://make.wordpress.org/core/2013/07/28/potential-roadmap-for-taxonomy-meta-and-post-relationships/ Taxonomy Roadmap
  *
  * @since 0.1.0
  */
-final class WP_Term_Color {
+final class WP_Term_Colors {
 
 	/**
 	 * @var string Plugin version
@@ -159,8 +159,8 @@ final class WP_Term_Color {
 		// Add the help tab
 		get_current_screen()->add_help_tab(array(
 			'id'      => 'wp_term_color_help_tab',
-			'title'   => __( 'Term Color', 'wp-term-color' ),
-			'content' => '<p>' . __( 'Terms can have unique colors to help separate them from each other.', 'wp-term-color' ) . '</p>',
+			'title'   => __( 'Term Color', 'wp-term-colors' ),
+			'content' => '<p>' . __( 'Terms can have unique colors to help separate them from each other.', 'wp-term-colors' ) . '</p>',
 		) ); ?>
 
 		<style type="text/css">
@@ -327,11 +327,11 @@ final class WP_Term_Color {
 
 		<div class="form-field form-required">
 			<label for="term-color">
-				<?php esc_html_e( 'Color', 'wp-term-color' ); ?>
+				<?php esc_html_e( 'Color', 'wp-term-colors' ); ?>
 			</label>
 			<input type="text" name="term-color" id="term-color" value="" size="7">
 			<p class="description">
-				<?php esc_html_e( 'Assign terms a custom color to visually separate them from each-other.', 'wp-term-color' ); ?>
+				<?php esc_html_e( 'Assign terms a custom color to visually separate them from each-other.', 'wp-term-colors' ); ?>
 			</p>
 		</div>
 
@@ -351,13 +351,13 @@ final class WP_Term_Color {
 		<tr class="form-field">
 			<th scope="row" valign="top">
 				<label for="term-color">
-					<?php esc_html_e( 'Color', 'wp-term-color' ); ?>
+					<?php esc_html_e( 'Color', 'wp-term-colors' ); ?>
 				</label>
 			</th>
 			<td>
 				<input name="term-color" id="term-color" type="text" value="<?php echo $this->get_term_color( $term->term_id ); ?>" size="7" />
 				<p class="description">
-					<?php esc_html_e( 'Assign terms a custom color to visually separate them from each-other.', 'wp-term-color' ); ?>
+					<?php esc_html_e( 'Assign terms a custom color to visually separate them from each-other.', 'wp-term-colors' ); ?>
 				</p>
 			</td>
 		</tr>
@@ -382,7 +382,7 @@ final class WP_Term_Color {
 		<fieldset>
 			<div class="inline-edit-col">
 				<label>
-					<span class="title"><?php esc_html_e( 'Color', 'wp-term-color' ); ?></span>
+					<span class="title"><?php esc_html_e( 'Color', 'wp-term-colors' ); ?></span>
 					<span class="input-text-wrap">
 						<input type="text" class="ptitle" name="term-color" value="" size="7">
 					</span>
@@ -439,17 +439,17 @@ final class WP_Term_Color {
 endif;
 
 /**
- * Instantiate the main WordPress Term Color class
+ * Instantiate the main WordPress Term Colors class
  *
  * @since 0.1.0
  */
-function _wp_term_color() {
+function _wp_term_colors() {
 
 	// Bail if no term meta
 	if ( ! function_exists( 'add_term_meta' ) ) {
 		return;
 	}
 
-	new WP_Term_Color();
+	new WP_Term_Colors();
 }
-add_action( 'init', '_wp_term_color', 99 );
+add_action( 'init', '_wp_term_colors', 99 );
