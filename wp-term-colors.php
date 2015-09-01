@@ -5,7 +5,7 @@
  * Plugin URI:  https://wordpress.org/plugins/wp-term-colors/
  * Description: Pretty colors for categories, tags, and other taxonomy terms
  * Author:      John James Jacoby
- * Version:     0.1.0
+ * Version:     0.1.1
  * Author URI:  https://profiles.wordpress.org/johnjamesjacoby/
  * License:     GPL v2 or later
  */
@@ -26,12 +26,12 @@ final class WP_Term_Colors {
 	/**
 	 * @var string Plugin version
 	 */
-	public $version = '0.1.0';
+	public $version = '0.1.1';
 
 	/**
 	 * @var string Database version
 	 */
-	public $db_version = 201508240001;
+	public $db_version = 201509010001;
 
 	/**
 	 * @var string Database version
@@ -325,7 +325,7 @@ final class WP_Term_Colors {
 	public static function term_color_add_form_field() {
 		?>
 
-		<div class="form-field form-required">
+		<div class="form-field term-color-wrap">
 			<label for="term-color">
 				<?php esc_html_e( 'Color', 'wp-term-colors' ); ?>
 			</label>
@@ -348,7 +348,7 @@ final class WP_Term_Colors {
 	public function term_color_edit_form_field( $term = false ) {
 		?>
 
-		<tr class="form-field">
+		<tr class="form-field term-color-wrap">
 			<th scope="row" valign="top">
 				<label for="term-color">
 					<?php esc_html_e( 'Color', 'wp-term-colors' ); ?>
