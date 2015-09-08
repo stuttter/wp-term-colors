@@ -1,5 +1,5 @@
 === WP Term Colors ===
-Contributors: johnjamesjacoby
+Contributors: johnjamesjacoby, stuttter
 Tags: taxonomy, term, meta, metadata, color, colors
 Requires at least: 4.2
 Tested up to: 4.3
