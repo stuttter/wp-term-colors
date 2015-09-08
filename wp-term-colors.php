@@ -25,11 +25,6 @@ function _wp_term_colors() {
 		return;
 	}
 
-	// Conditionally include the term meta UI class
-	if ( function_exists( 'wp_include_term_meta_ui' ) ) {
-		wp_include_term_meta_ui();
-	}
-
 	// Setup the main file
 	$file = __FILE__;
 
