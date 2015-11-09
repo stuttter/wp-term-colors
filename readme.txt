@@ -2,8 +2,8 @@
 Contributors: johnjamesjacoby, stuttter
 Tags: taxonomy, term, meta, metadata, color, colors
 Requires at least: 4.2
-Tested up to: 4.3
-Stable tag: 0.1.1
+Tested up to: 4.4
+Stable tag: 0.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -63,7 +63,7 @@ $terms = get_terms( 'category', array(
 	'parent'     => 0,
 	'hide_empty' => false,
 
-	// Query by color using the "wp-term-meta" plugin!
+	// Query by color
 	'meta_query' => array( array(
 		'key'   => 'color',
 		'value' => '#c0ffee'
@@ -80,6 +80,9 @@ The WordPress support forums: https://wordpress.org/support/plugin/wp-term-color
 http://github.com/stuttter/wp-term-colors/
 
 == Changelog ==
+
+= 0.1.3 =
+* Updated metadata UI class
 
 = 0.1.1 =
 * Updated form field classes

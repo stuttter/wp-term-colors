@@ -5,7 +5,7 @@
  *
  * @since 0.1.2
  *
- * @package TermColors/Includes/Class
+ * @package Plugins/Terms/Metadata/Color
  */
 
 // Exit if accessed directly
