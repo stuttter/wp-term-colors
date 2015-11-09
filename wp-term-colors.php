@@ -3,10 +3,10 @@
 /**
  * Plugin Name: WP Term Colors
  * Plugin URI:  https://wordpress.org/plugins/wp-term-colors/
- * Description: Pretty colors for categories, tags, and other taxonomy terms
  * Author:      John James Jacoby
- * Version:     0.1.3
  * Author URI:  https://profiles.wordpress.org/johnjamesjacoby/
+ * Version:     0.1.4
+ * Description: Pretty colors for categories, tags, and other taxonomy terms
  * License:     GPL v2 or later
  */
 
