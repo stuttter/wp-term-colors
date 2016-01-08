@@ -66,7 +66,7 @@ final class WP_Term_Colors extends WP_Term_Meta_UI {
 		wp_enqueue_style( 'wp-color-picker' );
 
 		// Enqueue fancy coloring; includes quick-edit
-		wp_enqueue_script( 'term-color', $this->url . 'assets/js/term-color.js',  array( 'wp-color-picker' ), $this->db_version, true );
+		wp_enqueue_script( 'term-color', $this->url . 'assets/js/term-color.js',  array( 'wp-color-picker', 'jquery' ), $this->db_version, true );
 		wp_enqueue_style( 'term-color', $this->url . 'assets/css/term-color.css', array( 'wp-color-picker' ), $this->db_version );
 	}
 
