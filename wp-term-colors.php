@@ -5,9 +5,12 @@
  * Plugin URI:  https://wordpress.org/plugins/wp-term-colors/
  * Author:      John James Jacoby
  * Author URI:  https://profiles.wordpress.org/johnjamesjacoby/
- * Version:     0.2.0
+ * License:     GPLv2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Description: Pretty colors for categories, tags, and other taxonomy terms
- * License:     GPL v2 or later
+ * Version:     0.2.0
+ * Text Domain: wp-term-colors
+ * Domain Path: /assets/lang/
  */
 
 // Exit if accessed directly
@@ -23,7 +26,7 @@ function _wp_term_colors() {
 	// Setup the main file
 	$plugin_path = plugin_dir_path( __FILE__ );
 
-	// Include the main class
+	// Classes
 	require_once $plugin_path . '/includes/class-wp-term-meta-ui.php';
 	require_once $plugin_path . '/includes/class-wp-term-colors.php';
 }
@@ -35,11 +38,6 @@ add_action( 'plugins_loaded', '_wp_term_colors' );
  * @since 0.2.0
  */
 function _wp_term_colors_init() {
-
-	// Allow term colors to be registered
-	do_action( 'wp_register_term_colors' );
-
-	// Instantiate the main class
 	new WP_Term_Colors( __FILE__ );
 }
 add_action( 'init', '_wp_term_colors_init', 99 );
