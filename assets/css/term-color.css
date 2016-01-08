@@ -1,0 +1,11 @@
+.column-color {
+	width: 74px;
+}
+
+.term-color {
+	height: 25px;
+	width: 25px;
+	display: inline-block;
+	border: 2px solid #eee;
+	border-radius: 100%;
+}

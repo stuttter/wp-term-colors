@@ -1,16 +1,16 @@
-jQuery( document ).ready( function() {
+jQuery( document ).ready( function( $ ) {
     'use strict';
 
-    if ( typeof jQuery.wp === 'object' && typeof jQuery.wp.wpColorPicker === 'function' ) {
-        jQuery( '#term-color' ).wpColorPicker();
+    if ( typeof $.wp === 'object' && typeof $.wp.wpColorPicker === 'function' ) {
+        $( '#term-color' ).wpColorPicker();
     } else {
-        jQuery( '#colorpicker' ).farbtastic( '#term-color' );
+        $( '#colorpicker' ).farbtastic( '#term-color' );
     }
 
-    jQuery( '.editinline' ).on( 'click', function() {
-        var tag_id = jQuery( this ).parents( 'tr' ).attr( 'id' ),
-			color  = jQuery( 'td.color i', '#' + tag_id ).attr( 'data-color' );
+    $( '.editinline' ).on( 'click', function( e ) {
+        var tag_id = $( this ).parents( 'tr' ).attr( 'id' ),
+			color  = $( 'td.color i', '#' + tag_id ).data( 'color' );
 
-        jQuery( ':input[name="term-color"]', '.inline-edit-row' ).val( color );
+        $( ':input[name="term-color"]', '.inline-edit-row' ).val( color );
     } );
 } );

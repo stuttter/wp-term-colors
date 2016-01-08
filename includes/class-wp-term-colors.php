@@ -66,7 +66,8 @@ final class WP_Term_Colors extends WP_Term_Meta_UI {
 		wp_enqueue_style( 'wp-color-picker' );
 
 		// Enqueue fancy coloring; includes quick-edit
-		wp_enqueue_script( 'term-color', $this->url . 'assets/js/term-color.js', array( 'wp-color-picker' ), $this->db_version, true );
+		wp_enqueue_script( 'term-color', $this->url . 'assets/js/term-color.js',  array( 'wp-color-picker' ), $this->db_version, true );
+		wp_enqueue_style( 'term-color', $this->url . 'assets/css/term-color.css', array( 'wp-color-picker' ), $this->db_version );
 	}
 
 	/**
@@ -80,30 +81,6 @@ final class WP_Term_Colors extends WP_Term_Meta_UI {
 			'title'   => __( 'Term Color', 'wp-term-colors' ),
 			'content' => '<p>' . __( 'Terms can have unique colors to help separate them from each other.', 'wp-term-colors' ) . '</p>',
 		) );
-	}
-
-	/**
-	 * Align custom `color` column
-	 *
-	 * @since 0.1.0
-	 */
-	public function admin_head() {
-		?>
-
-		<style type="text/css">
-			.column-color {
-				width: 74px;
-			}
-			.term-color {
-				height: 25px;
-				width: 25px;
-				display: inline-block;
-				border: 2px solid #eee;
-				border-radius: 100%;
-			}
-		</style>
-
-		<?php
 	}
 
 	/**
