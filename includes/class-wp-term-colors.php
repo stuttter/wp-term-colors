@@ -30,11 +30,6 @@ final class WP_Term_Colors extends WP_Term_Meta_UI {
 	public $db_version = 201601070001;
 
 	/**
-	 * @var string Database version
-	 */
-	public $db_version_key = 'wpdb_term_color_version';
-
-	/**
 	 * @var string Metadata key
 	 */
 	public $meta_key = 'color';
