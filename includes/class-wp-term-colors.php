@@ -45,7 +45,7 @@ final class WP_Term_Colors extends WP_Term_Meta_UI {
 		$this->labels = array(
 			'singular'    => esc_html__( 'Color',  'wp-term-colors' ),
 			'plural'      => esc_html__( 'Colors', 'wp-term-colors' ),
-			'description' => esc_html__( 'Assign terms a custom color to visually separate them from each-other.', 'wp-term-colors' )
+			'description' => esc_html__( 'Assign a custom color to visually separate each item.', 'wp-term-colors' )
 		);
 
 		// Call the parent and pass the file
