@@ -465,7 +465,12 @@ class WP_Term_Meta_UI {
 		// Get the term being posted
 		$term_key = 'term-' . $this->meta_key;
 
-		// Bail if not updating meta_key
+		// Bail if not updating meta_key.
+		if ( ! isset( $_POST[ $term_key ] ) ) {
+			return;
+		}
+
+		// Set a default value if empty.
 		$meta = ! empty( $_POST[ $term_key ] )
 			? $_POST[ $term_key ]
 			: '';
