@@ -1,24 +1,19 @@
 === WP Term Colors ===
-Contributors: johnjamesjacoby, stuttter
-Tags: taxonomy, term, meta, metadata, color, colors
+Contributors:      johnjamesjacoby, stuttter
+Tags:              taxonomy, term, meta, metadata, color, colors
+Requires PHP:      5.6.20
 Requires at least: 4.4
-Tested up to: 4.4
-Stable tag: 0.2.0
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9Q4F4EL5YJ62J
+Tested up to:      5.2
+Stable tag:        2.0.0
+License:           GPLv2 or later
+License URI:       http://www.gnu.org/licenses/gpl-2.0.html
+Donate link:       https://ko-fi.com/jjj
 
 == Description ==
 
 Pretty colors for categories, tags, and other taxonomy terms
 
 WP Term Colors allows users to assign colors to any visible category, tag, or taxonomy term using a fancy color picker, providing a customized look for their taxonomies.
-
-= Dependencies =
-
-Not since WordPress 4.4.
-
-Install the [WP Term Meta](https://wordpress.org/plugins/wp-term-meta/ "Metadata, for taxonomy terms.") plugin if you're on an earlier version.
 
 = Also checkout =
 
@@ -50,7 +45,7 @@ Install the [WP Term Meta](https://wordpress.org/plugins/wp-term-meta/ "Metadata
 
 = Does this plugin depend on any others? =
 
-Yes. Please install the [WP Term Meta](https://wordpress.org/plugins/wp-term-meta/ "Metadata, for taxonomy terms.") plugin.
+No. Not since WordPress 4.4.
 
 = Does this create new database tables? =
 
@@ -89,6 +84,9 @@ The WordPress support forums: https://wordpress.org/support/plugin/wp-term-color
 http://github.com/stuttter/wp-term-colors/
 
 == Changelog ==
+
+= 2.0.0 =
+* Update base class
 
 = 0.2.0 =
 * Update base class
