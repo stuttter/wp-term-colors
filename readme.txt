@@ -9,6 +9,8 @@ License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 Donate link:       https://ko-fi.com/jjj
 
+Assign colors to categories, tags, and other taxonomy terms.
+
 == Description ==
 
 Pretty colors for categories, tags, and other taxonomy terms
