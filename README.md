@@ -16,8 +16,6 @@ WP Term Colors allows users to assign colors to any visible category, tag, or ta
 
 Not since WordPress 4.4.
 
-Install the [WP Term Meta](https://wordpress.org/plugins/wp-term-meta/ "Metadata, for taxonomy terms.") plugin if you're on an earlier version.
-
 ### Does this create new database tables?
 
 No. There are no new database tables with this plugin.
@@ -37,7 +35,7 @@ $terms = get_terms( 'category', array(
 	'parent'     => 0,
 	'hide_empty' => false,
 
-	// Query by color using the "wp-term-meta" plugin!
+	// Query by color.
 	'meta_query' => array( array(
 		'key'   => 'color',
 		'value' => '#c0ffee'
