@@ -38,6 +38,12 @@ add_action( 'plugins_loaded', '_wp_term_colors' );
  * @since 0.2.0
  */
 function _wp_term_colors_init() {
+	load_plugin_textdomain(
+		'wp-term-colors',
+		false,
+		dirname( plugin_basename( __FILE__ ) ) . '/assets/lang'
+	);
+
 	new WP_Term_Colors( __FILE__ );
 }
 add_action( 'init', '_wp_term_colors_init', 99 );
