@@ -4,7 +4,7 @@ Tags:              taxonomy, term, meta, metadata, color
 Requires PHP:      5.6.20
 Requires at least: 4.4
 Tested up to:      7.1
-Stable tag:        2.0.0
+Stable tag:        2.0.1
 License:           GPLv2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 Donate link:       https://ko-fi.com/jjj
@@ -86,6 +86,9 @@ The WordPress support forums: https://wordpress.org/support/plugin/wp-term-color
 https://github.com/stuttter/wp-term-colors/
 
 == Changelog ==
+
+= 2.0.1 =
+* Load installed plugin language packs before translated labels are initialized
 
 = 2.0.0 =
 * Remove the WP Term Meta dependency by using term metadata built into WordPress 4.4 and newer
