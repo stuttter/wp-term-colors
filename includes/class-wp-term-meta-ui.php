@@ -317,25 +317,27 @@ class UI {
 			return $clauses;
 		}
 
-		// Join term meta data
-		$clauses['join'] .= " INNER JOIN {$wpdb->termmeta} AS tm ON t.term_id = tm.term_id";
+		// Join only this metadata while retaining terms without a value
+		$meta_alias = 'wp_term_meta_' . strtolower( preg_replace( '/[^a-z0-9_]/i', '_', $this->meta_key ) );
+		$clauses['join'] .= $wpdb->prepare(
+			" LEFT JOIN {$wpdb->termmeta} AS {$meta_alias} ON ( t.term_id = {$meta_alias}.term_id AND {$meta_alias}.meta_key = %s )",
+			$this->meta_key
+		);
 
 		// Maybe order by term meta
-		switch ( $args[ 'orderby' ] ) {
+		switch ( $args['orderby'] ) {
 			case $this->meta_key :
 			case 'meta_value' :
 				if ( ! empty( $this->key_type ) ) {
-					$clauses['orderby'] = "ORDER BY CAST(tm.meta_value AS tm)";
+					$meta_query = new \WP_Meta_Query();
+					$cast = $meta_query->get_cast_for_type( $this->key_type );
+					$clauses['orderby'] = "ORDER BY CAST({$meta_alias}.meta_value AS {$cast})";
 				} else {
-					$clauses['orderby'] = "ORDER BY tm.meta_value";
+					$clauses['orderby'] = "ORDER BY {$meta_alias}.meta_value";
 				}
-				$clauses['fields'] .= ', tm.*';
-				$clauses['where']  .= " AND tm.meta_key = '{$this->meta_key}'";
 				break;
 			case 'meta_value_num':
-				$clauses['orderby'] = "ORDER BY tm.meta_value+0";
-				$clauses['fields'] .= ', tm.*';
-				$clauses['where']  .= " AND tm.meta_key = '{$this->meta_key}'";
+				$clauses['orderby'] = "ORDER BY {$meta_alias}.meta_value+0";
 				break;
 		}
 
