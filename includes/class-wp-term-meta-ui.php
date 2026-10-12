@@ -188,10 +188,12 @@ class UI {
 	 * @since 2.0.0
 	 */
 	public function register_meta() {
-		register_meta( 'term', $this->meta_key, array(
-			'auth_callback'     => array( $this, 'auth_callback'     ),
-			'sanitize_callback' => array( $this, 'sanitize_callback' )
-		) );
+		register_meta(
+			'term',
+			$this->meta_key,
+			array( $this, 'sanitize_callback' ),
+			array( $this, 'auth_callback'     )
+		);
 	}
 
 	/**
@@ -276,7 +278,7 @@ class UI {
 		}
 
 		// Ordering by meta key
-		if ( ! empty( $_REQUEST['orderby'] ) && ( $this->meta_key === $_REQUEST['orderby'] ) ) {
+		if ( isset( $query_vars['orderby'] ) && ( $this->meta_key === $query_vars['orderby'] ) ) {
 			$orderby = 'meta_value';
 		}
 

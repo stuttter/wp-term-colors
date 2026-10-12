@@ -37,6 +37,16 @@ class WP_Term_Colors_Test_UI extends JJJ\WP\Term\Meta\UI {
 
 $ui = new WP_Term_Colors_Test_UI();
 
+$_REQUEST['orderby'] = 'color';
+
+if ( 't.name' !== $ui->get_terms_orderby( 't.name', array( 'orderby' => 'name' ), array( 'product_cat' ) ) ) {
+	throw new RuntimeException( 'A color-sorted request must not alter unrelated internal term queries.' );
+}
+
+if ( 'meta_value' !== $ui->get_terms_orderby( 't.name', array( 'orderby' => 'color' ), array( 'product_cat' ) ) ) {
+	throw new RuntimeException( 'A color term query must use metadata ordering.' );
+}
+
 $clauses = array(
 	'fields'  => 't.term_id',
 	'join'    => '',
