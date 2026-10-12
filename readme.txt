@@ -88,7 +88,11 @@ http://github.com/stuttter/wp-term-colors/
 == Changelog ==
 
 = 2.0.0 =
-* Update base class
+* Remove the WP Term Meta dependency by using term metadata built into WordPress 4.4 and newer
+* Initialize after custom taxonomies are registered
+* Add color-picker styling and improve quick-edit behavior
+* Keep uncolored terms visible when sorting the term list by color
+* Preserve metadata callback compatibility with WordPress 4.4
 
 = 0.2.0 =
 * Update base class
